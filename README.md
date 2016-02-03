@@ -77,7 +77,7 @@ at android.support.test.runner.MonitoringInstrumentation.startActivitySync(Monit
 ...
 ```        
 
-This is no bueno. Our activity started just fine and it's off doing it's job. If one Message was sitting in the MessageQueue taking 45 seconds that would be a problem. But we'd already know that because our actual app would get an ANR Device not responding problem. There's nothing wrong with our Activity needing to add a bunch of Messages to the MessageQueue
+This is no bueno. Our activity started just fine and it's off doing it's job. If one Message was sitting in the MessageQueue taking 45 seconds that would be a problem. But we'd already know that because our actual app would get an ANR Device not responding problem. There's nothing wrong with our Activity needing to add a bunch of Messages to the MessageQueue.
 
 
 ### Double Trouble
