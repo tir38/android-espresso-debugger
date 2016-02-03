@@ -1,5 +1,7 @@
 package com.example.intenttestertester;
 
+import android.content.Intent;
+import android.support.test.espresso.intent.Intents;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -11,10 +13,13 @@ import org.junit.runner.RunWith;
 public class IntentsTestRuleTester {
 
     @Rule
-    public IntentsTestRule<MainActivity> mIntentsTestRule = new IntentsTestRule<>(MainActivity.class, true, true);
+    public IntentsTestRule<MainActivity> mIntentsTestRule = new IntentsTestRule<>(MainActivity.class, true, false);
 
     @Test
     public void someTestThatReliesOnActivityBeingLaunched() throws Exception {
+
+        Intents.init();
+        mIntentsTestRule.launchActivity(new Intent());
         // ...
 
         // will throw:

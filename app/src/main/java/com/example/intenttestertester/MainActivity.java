@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final long TIMER_DURATION = 60; // time in seconds
+    private static final long TIMER_DURATION = 46; // time in seconds
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final int SAMPLE_MESSAGE = 1;
 
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             public void handleMessage(Message msg) {
                 if (timeLeft() >= 0) {
 
-                    if (timeLeft()% 1000 == 0) {
+                    if (timeLeft() % 1000 == 0) {
                         // every second
                         mTextView.setText("we are now flooding the MessageQueue with messages to keep it from going idle for the next: " + timeLeft() + " milliseconds");
                     }
