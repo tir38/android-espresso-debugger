@@ -64,7 +64,8 @@ All of this becomes a problem if the UI thread's `MessageQueue` never becomes id
 
 
 ```
-java.lang.RuntimeException: Could not launch intent Intent { act=android.intent.action.MAIN flg=0x14000000 cmp=com.example.intenttestertester/.MainActivity } within 45 seconds. 
+java.lang.RuntimeException: 
+Could not launch intent Intent { act=android.intent.action.MAIN flg=0x14000000 cmp=com.example.intenttestertester/.MainActivity } within 45 seconds. 
 Perhaps the main thread has not gone idle within a reasonable amount of time? There 
 could be an animation or something constantly repainting the screen. Or the activity is 
 doing network calls on creation? See the threaddump logs. For your reference the last 
