@@ -64,7 +64,13 @@ All of this becomes a problem if the UI thread's `MessageQueue` never becomes id
 
 
 ```
-java.lang.RuntimeException: Could not launch intent Intent { act=android.intent.action.MAIN flg=0x14000000 cmp=com.example.intenttestertester/.MainActivity } within 45 seconds. Perhaps the main thread has not gone idle within a reasonable amount of time? There could be an animation or something constantly repainting the screen. Or the activity is doing network calls on creation? See the threaddump logs. For your reference the last time the event queue was idle before your activity launch request was 1454531505219 and now the last time the queue went idle was: 1454531505219. If these numbers are the same your activity might be hogging the event queue.
+java.lang.RuntimeException: Could not launch intent Intent { act=android.intent.action.MAIN flg=0x14000000 cmp=com.example.intenttestertester/.MainActivity } within 45 seconds. 
+Perhaps the main thread has not gone idle within a reasonable amount of time? There 
+could be an animation or something constantly repainting the screen. Or the activity is 
+doing network calls on creation? See the threaddump logs. For your reference the last 
+time the event queue was idle before your activity launch request was 1454531505219 and 
+now the last time the queue went idle was: 1454531505219. If these numbers are the same 
+your activity might be hogging the event queue.
 
 at android.support.test.runner.MonitoringInstrumentation.startActivitySync(MonitoringInstrumentation.java:362)
 ...
@@ -79,7 +85,9 @@ If the above was bad enough, we'd still get some feedback telling us that  `Inst
 
 
 ```
-java.lang.NullPointerException: Attempt to invoke virtual method 'void android.support.test.espresso.intent.Intents.internalRelease()' on a null object reference
+java.lang.NullPointerException: 
+Attempt to invoke virtual method 
+'void android.support.test.espresso.intent.Intents.internalRelease()' on a null object reference
 
 at android.support.test.espresso.intent.Intents.release(Intents.java:140)
 ...
