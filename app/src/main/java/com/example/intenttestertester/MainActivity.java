@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final long TIMER_DURATION = 46; // time in seconds
+    private static final long TIMER_DURATION = 46; // time in seconds; needs to be longer than MonitoringInstrumentation.START_ACTIVITY_TIMEOUT_SECONDS
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final int SAMPLE_MESSAGE = 1;
 
